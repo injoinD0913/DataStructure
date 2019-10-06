@@ -1,6 +1,11 @@
 #include <stdio.h>
+
+
+
+#include <stdio.h>
 #define maxSize 7
-typedef struct {
+typedef struct 
+{
 	char data;
 	int cur;
 }component;
@@ -22,7 +27,8 @@ void displayArr(component* array, int body);
 int mallocArr(component* array);
 //将摘除下来的节点链接到备用链表上
 void freeArr(component* array, int k);
-int main() {
+int main()
+{
 	component array[maxSize];
 	int body = initArr(array);
 	printf("静态链表为：\n");
@@ -35,7 +41,6 @@ int main() {
 	printf("删除数据域为‘a’的结点:\n");
 	deletArr(array, body, 'a');
 	displayArr(array, body);
-
 	printf("查找数据域为‘e’的结点的位置:\n");
 	int selectAdd = selectElem(array, body, 'e');
 	printf("%d\n", selectAdd);
